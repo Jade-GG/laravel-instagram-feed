@@ -47,7 +47,7 @@ class Instagram
             'client_id' => $client_id,
             'redirect_uri' => $redirect,
             'response_type' => 'code',
-            'scope' => implode(',', $scopes),
+            'scope' => urlencode(implode(',', $scopes)),
             'state' => $profile->identity_token,
         ];
 
